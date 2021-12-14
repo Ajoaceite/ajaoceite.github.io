@@ -12,39 +12,56 @@
 
   <body class="bg-black muli">
 
-    <!-- <section id="home" class="min-h-100vh flex justify-start items-center"> <div class="mx-5 md-mx-l5"> <div> <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Serve Your <br />Website Fast</h1> </div> </div> </section> -->
+   
     <div class="flex-container">
 
-      <!-- big text -->
       <section class="p-10 md-py-10">
         <div class="w-100pc md-w-70pc mx-auto py-10">
           <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
             El día se acerca
-            <span class="border-b bc-indigo bw-4">muy pronto</span>.
+            <span class="border-b bc-yellow bw-4">muy pronto</span>.
           </h2>
         </div>
 
       </section>
       <div class="video-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/1KkSMtzpIrI?controls=0" title="Ajoaceite." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        <iframe class="video" src="https://www.youtube-nocookie.com/embed/ZKgkJe3Sqzs?controls=0" title="Ajoaceite." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
       </div>
+      Si lees esto eres un poco cotilla...
     </div>
 
     <style>
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
 
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 40;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin-bottom: 20px;
+      }
 
+      body,
+      html {
+        height: 100%;
+        margin: 1;
+
+      }
 
       .flex-container {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        background-color: green;
+        background-color: black;
+        height: 100%;
       }
-      .video-container {
-          display: flex;
-      }
-
-
     </style>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
