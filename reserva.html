@@ -24,19 +24,19 @@
 <div id="header"></div>
 
 <div class="body-container">
-    <form class="form-container">
+    <form id="booking-form" class="form-container" onsubmit="return validateForm()" method="post">
         <div class="form-container-name">
             <div>
                 <label for="grid-first-name">
                     Nombre
                 </label>
-                <input id="grid-first-name" type="text" placeholder="Jane">
+                <input id="grid-first-name" type="text" placeholder="Jane"  required>
             </div>
             <div>
                 <label for="grid-last-name">
                     Apellido
                 </label>
-                <input id="grid-last-name" type="text" placeholder="Doe">
+                <input id="grid-last-name" type="text" placeholder="Doe"  required>
             </div>
         </div>
         <div class="form-container-email">
@@ -44,7 +44,7 @@
                 <label for="grid-email">
                     Correo Electrónico
                 </label>
-                <input id="grid-email" type="email" placeholder="felipe@gmail.com">
+                <input id="grid-email" type="email" placeholder="jane@gmail.com"  required>
             </div>
         </div>
         <div class="form-container-hall">
@@ -54,9 +54,8 @@
                 </label>
                 <div class="relative">
                     <select id="grid-building">
-                        <option>New Mexico</option>
-                        <option>Missouri</option>
-                        <option>Texas</option>
+                        <option>Edificio1</option>
+                        <option>Edificio2</option>
                     </select>
                     <div class="select-container-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -69,14 +68,20 @@
                 </label>
                 <div class="relative">
                     <select id="grid-hall">
-                        <option>New Mexico</option>
-                        <option>Missouri</option>
-                        <option>Texas</option>
+                        <option value="1">Salon 1 (1 persona)</option>
+                        <option value="2">Salon 2 (4 persona</option>
+                        <option value="3">Salon 3 (20 persona</option>
                     </select>
                     <div class="select-container-svg">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
                     </div>
                 </div>
+            </div>
+            <div>
+                <label for="grid-people">
+                    Personas
+                </label>
+                <input id="grid-people" type="number" placeholder="1"  required>
             </div>
         </div>
         <div class="form-container-date">
@@ -84,19 +89,26 @@
                 <label for="grid-start-date">
                     Fecha y hora de inicio
                 </label>
-                <input id="grid-start-date" type="datetime-local">
+                <input id="grid-start-date" type="datetime-local" required>
             </div>
             <div>
                 <label for="grid-end-date">
                     Fecha y hora de fin
                 </label>
-                <input id="grid-end-date" type="datetime-local">
+                <input id="grid-end-date" type="datetime-local" required>
             </div>
+        </div>
+        <div class="form-container-submit">
+            <button class="button" type="submit">
+                Reservar
+            </button>
         </div>
     </form>
 </div>
 
 <div id="footer"></div>
+
+<script src="js/validacion-formulario.js"></script>
 
 </body>
 </html>

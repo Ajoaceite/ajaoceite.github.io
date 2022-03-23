@@ -13,6 +13,11 @@
   .body-container {
     background-color: #F3F3F3;
     position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    height: 100vh;
   }
 
   .nav-container {
@@ -22,10 +27,6 @@
 
   .top-container {
     position: relative;
-  }
-
-  .news-container {
-
   }
 
   .hide-scroll-bar {
@@ -110,11 +111,14 @@
 
   .top-container .button {
     border-radius: 10rem;
+    font-size: 0.75rem;
+    @apply md:text-lg;
   }
 
   .top-container span {
-    color: white;
-    font-size: 2rem;
+    color: black;
+    font-size: 1rem;
+    @apply md:text-4xl;
   }
 
   .news-container span {
@@ -171,6 +175,10 @@
     margin-bottom: 1.5rem;
   }
 
+  .form-container-submit {
+    padding-left: 0.75rem;
+  }
+
   .form-container-name div,
   .form-container-hall > div,
   .form-container-date div {
@@ -179,6 +187,15 @@
     padding-right: 0.75rem;
 
     @apply md:w-1/2;
+  }
+
+  .form-container-hall > div {
+    @apply md:w-2/5;
+  }
+
+  .form-container-hall > div:last-child {
+    margin-top: 1.5rem;
+    @apply md:w-1/5 md:mt-0;
   }
 
   .form-container-name div:first-child,
