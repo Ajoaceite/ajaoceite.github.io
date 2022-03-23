@@ -49,10 +49,10 @@
   .news-horizontal-scroll {
     padding-left: 0.5rem;
     padding-bottom: 0.5rem;
-    max-height: 240px;
+    max-height: 250px;
     display: flex;
 
-    @apply overflow-x-scroll hide-scroll-bar;
+    @apply overflow-x-scroll;
   }
 
   .form-container {

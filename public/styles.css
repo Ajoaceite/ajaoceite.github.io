@@ -511,6 +511,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .body-container {
   background-color: #F3F3F3;
   position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
 }
 
 .nav-container > :not([hidden]) ~ :not([hidden]) {
@@ -529,9 +534,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
-.news-container {
-}
-
 .centered-item {
   position: absolute;
   margin: 0;
@@ -544,17 +546,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .news-horizontal-scroll {
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
-  max-height: 240px;
+  max-height: 250px;
   display: flex;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.news-horizontal-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.news-horizontal-scroll {
   overflow-x: scroll;
 }
 
@@ -620,11 +613,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .top-container .button {
   border-radius: 10rem;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .top-container .button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .top-container span {
-  color: white;
-  font-size: 2rem;
+  color: black;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .top-container span {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .news-container span {
@@ -708,6 +716,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
+.form-container-submit {
+  padding-left: 0.75rem;
+}
+
 .form-container-name div,
   .form-container-hall > div,
   .form-container-date div {
@@ -719,6 +731,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px) {
   .form-container-name div, .form-container-hall > div, .form-container-date div {
     width: 50%;
+  }
+
+  .form-container-hall > div {
+    width: 40%;
+  }
+}
+
+.form-container-hall > div:last-child {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .form-container-hall > div:last-child {
+    margin-top: 0px;
+  }
+
+  .form-container-hall > div:last-child {
+    width: 20%;
   }
 }
 
