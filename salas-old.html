@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salas</title>
+    <link href="/public/styles.css" rel="stylesheet">
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>
+
+<div class="search-box">
+    <div class="flex items-center justify-center">
+        <div class="flex bg-amber-100 m-0">
+            <div class="flex m-8">
+
+                <div>
+                    <label for="ubicacion" class="block text-sm font-medium text-gray-700">Ubibación</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input type="text" name="ubicacion" id="ubicacion"
+                               class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+                               placeholder="Ubicación...">
+                    </div>
+                </div>
+                <div>
+                    <label for="entrada" class="block text-sm font-medium text-gray-700">Entrada</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input type="text" name="entrada" id="entrada"
+                               class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+                               placeholder="Entrada...">
+                    </div>
+                </div>
+                <div>
+                    <label for="salida" class="block text-sm font-medium text-gray-700">Salida</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input type="text" name="salida" id="salida"
+                               class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+                               placeholder="Salida...">
+                    </div>
+                </div>
+                <div>
+                    <label for="asistentes" class="block text-sm font-medium text-gray-700">Asistentes</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                        <input type="text" name="asistentes" id="asistentes"
+                               class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
+                               placeholder="Asistentes...">
+                    </div>
+                </div>
+                <button type="button" class="button">
+                    <a href="/">Buscar</a>
+                </button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="flex h-screen">
+    <div class="border-r border-gray-200 w-64 p-6 ">
+        <h6 class="font-bold text-2xl mb-2 ">Filtros</h6>
+        <div class="grid grid-cols-1 divide-y ">
+            <div class="my-2">
+                <label for="nombre" class="block  font-medium text-gray-700">Nombre</label>
+                <div class="mt-1 relative rounded-md shadow-sm">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre...">
+
+
+                </div>
+            </div>
+            <div class="font-medium text-gray-700 my-2">Valoración
+                <ul class="flex">
+
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                             class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                             class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                             class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                             class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                  d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star"
+                             class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor"
+                                  d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z"></path>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+            <div class="my-2">
+                <div class="block font-medium text-gray-700">Precio</div>
+                <div>
+                    <div>
+                        <input type="text" name="min" id="min" placeholder="Mínimo...">
+                    </div>
+                    <div>
+                        <input type="text" name="max" id="max" placeholder="Máximo...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-2">
+                <div class="block  font-medium text-gray-700">Servicios</div>
+
+                    <input type="checkbox" id="wifi" name="wifi" value="wifi"/>
+                    <label for="wifi" class="select-none">Wifi</label>
+                    <input type="checkbox" id="cocina" name="cocina" value="cocina"/>
+                    <label for="cocina" class="select-none">Cocina</label>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="p-6">
+
+        <h1 class="text-4xl font-bold mb-10">Contenido</h1>
+        <div class="flex space-x-3 ">
+
+            <article class="flex flex-col bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/public/img/room.png" alt="">
+                <div class="flex flex-col justify-between p-4 space-y-4 leading-normal">
+                        <h5 class=" mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sala fantasía</h5>
+                        30€ esto hay que ponerlo a la derecha
+                    <ul class="flex">
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                 class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                 class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">18 personas</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">10:00 - 21:30</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">5€/hora</p>
+                    </div>
+
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Muy buena...</p>
+                    <table class="table-auto">
+                        <tr>
+
+                            <td>Cocina</td>
+
+                            <td>Baño</td>
+
+                            <td>Cum</td>
+
+                        </tr>
+                    </table>
+
+                </div>
+            </article>
+
+
+            <article class="flex flex-col  bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/public/img/room.png" alt="">
+                <div class="flex flex-col justify-between p-4 space-y-4 leading-normal">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Sala fantasía</h5>
+                    <ul class="flex">
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                 class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
+                                 class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">18 personas</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">10:00 - 21:30</p>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">5€/hora</p>
+                    </div>
+
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer"></div>
+
+</body>
+</html>

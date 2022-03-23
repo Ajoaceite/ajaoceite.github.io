@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    <link href="/public/styles.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <div class="header-container">
+        <div class="max-w-full mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-6 h-16 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="index.html">
+                        <span class="sr-only">Inicio</span>
+                        <img class="h-4 w-auto sm:h-10" src="/public/img/logo.png" alt="">
+                    </a>
+                </div>
+
+
+
+                    <nav class="nav-container md:flex sm:flex"  id="nav-links">
+                        <a href="salas.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Salas </a>
+                        <a href="localizacion.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Localización </a>
+                        <a href="reserva.html" class="text-base font-medium text-gray-500 hover:text-gray-900"> Reservas </a>
+
+                    </nav>
+                    <div class=" hidden md:flex items-center justify-end md:flex-1 lg:w-0" id="nav-account">
+                        <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
+                        <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
+                    </div>
+
+
+                <div class="block md:hidden">
+                    <button id= "nav-toggle" class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+                        <svg class="h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+
+    document.getElementById('nav-toggle').onclick = function(){
+        document.getElementById("nav-account").classList.toggle("hidden");
+        document.getElementById("nav-links").classList.toggle("hidden");
+    }
+</script>
+</body>
+</html>
+
+

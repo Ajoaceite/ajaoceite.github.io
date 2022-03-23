@@ -1,75 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <title>Llegó el momento.</title>
-  </head>
+    <title>Inicio</title>
 
-  <body class="bg-black muli">
+    <link href="/public/styles.css" rel="stylesheet">
 
-   
-    <div class="flex-container">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
 
-      <section class="p-10 md-py-10">
-        <div class="w-100pc md-w-70pc mx-auto py-10">
-          <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
-            <span class="border-b bc-yellow bw-4">Hoy</span>
-             es el día. Nos vemos a las 22:30.
-          </h2>
+<body>
+
+<div id="header"></div>
+
+<div class="body-container">
+    <div class="top-container">
+        <div class="centered-item">
+            <span>Los mejores sitios de la provincia</span>
+            <br><br>
+            <button type="button" class="button">
+                <a href="salas.html">Encuentra tu sala</a>
+            </button>
         </div>
-
-      </section>
-      <div class="video-container">
-        <iframe class="video" src="https://www.youtube-nocookie.com/embed/ZKgkJe3Sqzs?rel=0?controls=0" title="Ajoaceite." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
-      </div>
-      Si lees esto eres un poco cotilla...
+        <img src="/public/img/office.png" alt="">
     </div>
 
-    <style>
-      .video-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
+    <aside class="news-container">
+        <span>Últimas noticias</span>
+        <div class="news-horizontal-scroll">
+            <div>
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
-      .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 40;
-        width: 100%;
-        height: 100%;
-        border: 0;
-        margin-bottom: 20px;
-      }
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
-      body,
-      html {
-        height: 100%;
-        margin: 1;
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
-      }
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
-      .flex-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        background-color: black;
-        height: 100%;
-      }
-    </style>
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+                <div class="news-item">
+                    <div>
+                        <img src="/public/img/room.png" alt="">
+                        <span class="text-lg pl-1 font-bold">Nueva sala en el centro</span></span><br>
+                        <span class="text-sm pl-1 box-decoration-clone">Recientemente se inauguró la sala de coworking que... </span>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div id="footer"></div>
+
+</body>
 </html>
